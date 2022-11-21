@@ -1,0 +1,48 @@
+#ifndef REGISTERS_H
+#define REGISTERS_H
+#include "Types.h"
+
+#define PIN0 0
+#define PIN1 1
+#define PIN2 2
+#define PIN3 3
+#define PIN4 4
+#define PIN5 5
+#define PIN6 6
+#define PIN7 7
+
+
+// interrupt reg
+#define SREG (*(volatile uint8_t*)(0x5F))
+#define GICR (*(volatile uint8_t*)(0x5B))
+#define MCUCR (*(volatile uint8_t*)(0x55))
+
+// timer reg
+#define TCCR0 (*(volatile uint8_t*)(0x53))
+#define TCNT0 (*(volatile uint8_t*)(0x52))
+#define TIFR (*(volatile uint8_t*)(0x58))
+#define TIMSK (*(volatile uint8_t*)(0x59))
+
+// Ports reg
+
+// port A reg
+#define PORTA (*(volatile uint8_t*)(0x3B))
+#define DDRA (*(volatile uint8_t*)(0x3A))
+#define PINA (*(volatile uint8_t*)(0x39))
+
+// port B reg
+#define PORTB (*(volatile uint8_t*)(0x38))
+#define DDRB (*(volatile uint8_t*)(0x37))
+#define PINB (*(volatile uint8_t*)(0x36))
+
+// port C reg
+#define PORTC (*(volatile uint8_t*)(0x35))
+#define DDRC (*(volatile uint8_t*)(0x34))
+#define PINC (*(volatile uint8_t*)(0x33))
+
+// port D reg
+#define PORTD (*(volatile uint8_t*)(0x32))
+#define DDRD (*(volatile uint8_t*)(0x31))
+#define PIND (*(volatile uint8_t*)(0x30))
+
+#endif
